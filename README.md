@@ -43,3 +43,6 @@ This means you can use the LOCAL `gradlew.bat` script to execute gradle commands
 - **run** - run the java application. Can use `--args="whatever args"` to pass arguments. Eg. `gradlew.bat run --args="multiply 9 6"`
 - **installDist** - will create a runnable application scripts under `build/install` with the project name as a folder containing a `bin` and `lib` folders.
 - **distZip** or **distTar** - will bundle the application in a zip file under `build\distributons`
+
+## Gradle project dependencies
+- Use combination of `repositories` and `dependencies` eg. mavenCentral() and dependency such as commons-cli:commons-cli:1.4 . See https://central.sonatype.dev/artifact/commons-cli/commons-cli/1.4
