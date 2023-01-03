@@ -29,3 +29,12 @@
 This project has been setup with a particular version of `gradle` using the `gradle wrapper` feature. Currently this is set to version 6.9.3.
 This means you can use the LOCAL `gradlew.bat` script to execute gradle commands. 
 `gradle wrapper` creates the ".gradle" and "gradle" folders
+
+## Gradle "java" plugin - tasks
+- **compileJava** - compiles the java based on the javac from the PATH env var. Class files will be placed into `build/classes`. Eg. *./gradlew compileJava --console=verbose*
+- **processResources** - copy the resource files to be with the class files - from the "src/main/resources" folder
+- **classes** - combines both the above tasks
+
+### Packaging a JAR file - using *jar* task
+- **jar** - creates a jar file into `build/libs` folder - based on the project name (default is the folder name) or set `archiveBaseName` property in the gradle file. If a `version` is defined in the gradle file, then this version number will also be appended to the jar filename.
+
