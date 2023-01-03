@@ -1,5 +1,5 @@
 # GRADLE LEARNING - JAVA EXAMPLE
-
+- See also the "**modules**" git branch for a multi-project example
 ## Expected Directory Structure
 
 *src/main/java* - production source code
@@ -46,3 +46,6 @@ This means you can use the LOCAL `gradlew.bat` script to execute gradle commands
 
 ## Gradle project dependencies
 - Use combination of `repositories` and `dependencies` eg. mavenCentral() and dependency such as commons-cli:commons-cli:1.4 . See https://central.sonatype.dev/artifact/commons-cli/commons-cli/1.4
+
+## Setup JUnit5 Testing
+- Need to include the dependencies - from maven central - but use the `testImplementation` keyword - so that these JUnit libs are not bundled with the application. Use command `gradlew test` to run the unit tests. There is a HTML report of the test results in `build/reports/tests/test` 

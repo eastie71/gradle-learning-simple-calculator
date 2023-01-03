@@ -29,4 +29,16 @@ repositories {
 dependencies {
     // Used for command line parsing
     implementation 'commons-cli:commons-cli:1.4'
+    // Using testImplementation for include JUnit - so that these libs are not bundled with the application
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
+}
+
+test {
+    // This is needed as the java-test task looks for Junit 4 by default - and we are using JUnit 5
+    useJUnitPlatform()
+
+    testLogging {
+        showStandardStreams = true
+    }
 }
