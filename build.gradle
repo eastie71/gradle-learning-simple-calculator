@@ -1,32 +1,12 @@
-plugins {
-    id 'java'
-    id 'application'
+allprojects {
+    version = '1.0.0'
 }
 
-version = '1.0.0'
+subprojects {
+    apply plugin: 'java'
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-}
-
-compileJava {
-    options.compilerArgs << '-Werror'
-}
-
-jar {
-    archiveBaseName = 'simple-calc'
-}
-
-application {
-    mainClass = 'com.linkedinlearning.calculator.Main'
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    // Used for command line parsing
-    implementation 'commons-cli:commons-cli:1.4'
+    java {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
 }

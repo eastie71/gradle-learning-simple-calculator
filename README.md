@@ -46,3 +46,4 @@ This means you can use the LOCAL `gradlew.bat` script to execute gradle commands
 
 ## Gradle project dependencies
 - Use combination of `repositories` and `dependencies` eg. mavenCentral() and dependency such as commons-cli:commons-cli:1.4 . See https://central.sonatype.dev/artifact/commons-cli/commons-cli/1.4
+- For multiple projects/modules you use the `include` keyword for the folders of each project/module, such as `include ':api', ':app'` and can add dependencies from another project/module. eg. in the `app` module add `implementation project(:api)` in the `dependencies`
